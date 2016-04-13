@@ -8,7 +8,20 @@
 </head>
 <body>
 
-<%= yield %>
+  <% if notice.present? %>
+    <aside class="alert alert-info">
+      <%= notice %>
+    </aside>
+  <% end %>
+  <% if alert.present? %>
+    <aside class="alert alert-danger">
+      <%= alert %>
+    </aside>
+  <% end %>
+
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>
