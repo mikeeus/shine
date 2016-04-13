@@ -12,6 +12,10 @@ gem 'devise'
 # Use bower for managing assets
 gem 'bower-rails'
 
+
+# Use sprockets
+gem 'sprockets-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
