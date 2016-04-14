@@ -12,6 +12,8 @@ gem 'devise'
 # Use bower for managing assets
 gem 'bower-rails'
 
+# Use faker to generate fake data models
+gem 'faker'
 
 # Use sprockets
 gem 'sprockets-rails'
