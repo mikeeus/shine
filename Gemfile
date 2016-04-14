@@ -12,6 +12,9 @@ gem 'devise'
 # Use bower for managing assets
 gem 'bower-rails'
 
+# Use angular-rails to manage angular install
+gem 'angularjs-rails'
+
 # Use faker to generate fake data models
 gem 'faker'
 
