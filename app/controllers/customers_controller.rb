@@ -20,5 +20,11 @@ class CustomersController < ApplicationController
       @page = 0
       @total_pages = 0
     end
+
+    # Respond to json requests
+    respond_to do |format|
+      format.html {}
+      format.json { render json: @customers }
+    end
   end
 end
