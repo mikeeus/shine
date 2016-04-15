@@ -17,9 +17,8 @@ class CustomersController < ApplicationController
       @total_pages = @search_return.count / PAGE_SIZE
     else
       @customers = []
+      @page = 0
+      @total_pages = 0
     end
-
-
-
   end
 end

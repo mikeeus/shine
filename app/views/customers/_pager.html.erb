@@ -5,7 +5,9 @@
           customers_path(keywords: keywords, page: page - 1) %>
     </li> 
     <% (0..@total_pages).each do |page_list| %>
-      <%= link_to "#{page_list + 1}", customers_path(keywords: keywords, page: page_list) %>
+      <span class="<%= page_list == page ? '' : 'disabled'%>">
+        <%= link_to "#{page_list + 1}", customers_path(keywords: keywords, page: page_list) %>
+      </span>
     <% end %>
     <li class="next <%= page > @total_pages ? 'disabled' : '' %>">
       <%= link_to_if page < @total_pages, "Next &rarr;".html_safe, customers_path(keywords: keywords, page: page + 1) %>
