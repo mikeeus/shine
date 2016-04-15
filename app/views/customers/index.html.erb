@@ -4,6 +4,9 @@
 
 <section class="search-form">
   <form>
+    <h1 class="searchedFor" ng-if="searchedFor">
+      <small>Searched for:</small> {{searchedFor}}
+    </h1>
     <div class="input-group input-group-lg">
     <label for="keywords"  class="sr-only">Keywords</label>
       <input type="text" name="keywords" class="form-controler input-lg"
