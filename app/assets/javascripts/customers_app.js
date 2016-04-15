@@ -4,12 +4,24 @@ app.controller("CustomerSearchController", [
             "$scope", "$http",
     function($scope ,  $http) {
 
-      var pate = 0;
-      
+      var page = 0;
+
+      $scope.previousPage = function() {
+        if (page > 0) {
+          page = page -1;
+          $scope.search($scope.keywords);
+        }
+      };
+
+      $scope.nextPage = function() {
+        page = page + 1;
+        @scope.search($scope.keywords);
+      };
+
       $scope.customers = [];
       $scope.search = function(searchTerm) {
         $http.get("/customers.json", 
-                  {"params": { "keywords": searchTerm}}
+                  { "params": { "keywords": searchTerm, "page": page } }
           ).then(
              function(response) {
               $scope.customers = response.data;
