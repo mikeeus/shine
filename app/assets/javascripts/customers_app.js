@@ -1,9 +1,21 @@
 var app = angular.module(
   'customers', 
   [
-    'ngRoute'
+    'ngRoute',
+    'template'
   ]
 );
+
+app.config([
+          "$routeProvider",
+  function($routeProvider) {
+
+    $routeProvider.when("/", {
+      controller: "CustomerSearchController",
+      templateURL: "customer_search.html"
+    });
+  }
+]);
 
 app.controller("CustomerSearchController", [
             "$scope", "$http",
@@ -42,13 +54,3 @@ app.controller("CustomerSearchController", [
   }
 ]);
 
-app.config([
-          "$routeProvider",
-  function($routeProvider) {
-
-    $routeProvider.when("/", {
-      controller: "CustomerSearchController",
-      templateURL: "customer_search.html"
-    });
-  }
-]);
