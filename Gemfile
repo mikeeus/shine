@@ -15,14 +15,22 @@ gem 'bower-rails'
 # Use angular-rails to manage angular install
 gem 'angularjs-rails'
 
+<<<<<<< HEAD
 # Use to handle compilation of HTML templates
+=======
+# Use angular rails templates to manage angularjs templates
+>>>>>>> master
 gem 'angular-rails-templates'
 
 # Use faker to generate fake data models
 gem 'faker'
 
 # Use sprockets
+<<<<<<< HEAD
 gem 'sprockets', '~> 2.0'
+=======
+gem 'sprockets'
+>>>>>>> master
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -52,6 +60,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  gem 'rspec-rails'
 end
 
 group :development do
