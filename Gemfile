@@ -15,11 +15,14 @@ gem 'bower-rails'
 # Use angular-rails to manage angular install
 gem 'angularjs-rails'
 
+# Use to handle compilation of HTML templates
+gem 'angular-rails-templates'
+
 # Use faker to generate fake data models
 gem 'faker'
 
 # Use sprockets
-gem 'sprockets-rails'
+gem 'sprockets', '~> 2.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

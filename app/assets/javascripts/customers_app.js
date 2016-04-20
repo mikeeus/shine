@@ -1,4 +1,21 @@
-var app = angular.module('customers', []);
+var app = angular.module(
+  'customers', 
+  [
+    'ngRoute',
+    'templates'
+  ]
+);
+
+app.config([
+           "$routeProvider",
+  function($routeProvider) {
+    $routeProvider.when("/", {
+      controller: "CustomerSearchController",
+      templateURL: "customer_search.html"
+    });
+  }
+]);
+
 
 app.controller("CustomerSearchController", [
             "$scope", "$http",
