@@ -1,27 +1,9 @@
 var app = angular.module(
   'customers', 
   [
-<<<<<<< HEAD
-    'ngRoute',
-    'templates'
-  ]
-);
-
-app.config([
-           "$routeProvider",
-  function($routeProvider) {
-    $routeProvider.when("/", {
-      controller: "CustomerSearchController",
-      templateURL: "customer_search.html"
-    });
-  }
-]);
-
-=======
     'ngRoute'
   ]
 );
->>>>>>> master
 
 app.controller("CustomerSearchController", [
             "$scope", "$http",

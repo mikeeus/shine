@@ -18,7 +18,18 @@
   <header>
     <h1 class="h3">Results</h1>
   </header>
-  <%= render partial: "pager", locals: { keywords: @keywords, page: @page } %>
+  <!-- NAVIGATION -->
+  <nav>
+    <ul class="pager">
+      <li class="previous">
+        <a href="" ng-click="previousPage()">&larr; Previous</a>
+      </li>
+      <li class="next">
+        <a href="" ng-click="nextPage()">Next &rarr;</a>
+      </li>
+    </ul>
+  </nav>
+
   <ol class="list-group">
     <li class="list-group-item clearfix"
         ng-repeat="customer in customers">
@@ -33,5 +44,16 @@
       <h4>{{customer.email}}</h4>
     </li>
   </ol>
-  <%= render partial: "pager", locals: { keywords: @keywords, page: @page } %>
+  
+  <!-- NAVIGATION -->
+  <nav>
+    <ul class="pager">
+      <li class="previous">
+        <a href="" ng-click="previousPage()">&larr; Previous</a>
+      </li>
+      <li class="next">
+        <a href="" ng-click="nextPage()">Next &rarr;</a>
+      </li>
+    </ul>
+  </nav>
 </section>
